@@ -9,7 +9,7 @@ public class TestManejoPersonas {
     
     public static void main(String[] args) {
         PersonaDAO personaDao=new PersonaDAO();
-        
+        /*s*/
         //INSERTANDO UN NUEVO OBJETO DE TIPO PERSONA
        // Persona personaNueva=new Persona("Nico","Lapropia","LArePropia@mail.com","466555454");
        // personaDao.insertar(personaNueva);
