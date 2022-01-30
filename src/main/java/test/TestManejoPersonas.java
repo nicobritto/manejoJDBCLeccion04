@@ -3,7 +3,7 @@ package test;
 import datos.PersonaDAO;
 import domain.Persona;
 import java.util.List;
-/*asd*/
+/*asds*/
 
 public class TestManejoPersonas {
     
