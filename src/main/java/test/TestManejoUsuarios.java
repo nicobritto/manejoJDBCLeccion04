@@ -1,7 +1,7 @@
 package test;
 
 import datos.Conexion;
-import datos.UsuarioDAO;
+import datos.UsuarioJDBC;
 import domain.Persona;
 import domain.Usuario;
 import java.sql.Connection;
@@ -21,7 +21,7 @@ public class TestManejoUsuarios {
                 conexion.setAutoCommit(false);
             }
 
-            UsuarioDAO usuarioDao = new UsuarioDAO(conexion);
+            UsuarioJDBC usuarioDao = new UsuarioJDBC(conexion);
 
             Usuario modificandoUsuario = new Usuario();
             modificandoUsuario.setIdUsuario(1);

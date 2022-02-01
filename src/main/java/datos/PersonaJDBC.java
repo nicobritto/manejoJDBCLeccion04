@@ -6,7 +6,7 @@ import java.sql.*;
 import java.util.*;
 
 
-public class PersonaDAO {//es persona JDBC
+public class PersonaJDBC {//es persona JDBC
 
     private Connection conexionTransaccional;
 
@@ -15,10 +15,10 @@ public class PersonaDAO {//es persona JDBC
     private static final String SQL_UPDATE = "UPDATE persona SET nombre = ?, apellido = ?, email = ?, telefono = ? WHERE id_persona = ? ";//cada signo de pregunta=nombre, apellido, email, telefono
     private static final String SQL_ELIMINAR = "DELETE FROM persona  WHERE id_persona = ? ";
 
-    public PersonaDAO() {
+    public PersonaJDBC() {
     }
 
-    public PersonaDAO(Connection conexionTransaccional) {
+    public PersonaJDBC(Connection conexionTransaccional) {
         this.conexionTransaccional = conexionTransaccional;
     }
 

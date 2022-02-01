@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class UsuarioDAO {
+public class UsuarioJDBC {
 
     private Connection conexionTransaccional;
 
@@ -22,10 +22,10 @@ public class UsuarioDAO {
     private static final String SQL_ACTUALIZAR = "UPDATE  usuario SET usuario = ?, password= ? WHERE id_usuario = ? ";
     private static final String SQL_ELIMINAR = "DELETE FROM usuario WHERE id_usuario = ? ";
 
-    public UsuarioDAO() {
+    public UsuarioJDBC() {
     }
 
-    public UsuarioDAO(Connection conexionTransaccional) {
+    public UsuarioJDBC(Connection conexionTransaccional) {
         this.conexionTransaccional = conexionTransaccional;
     }
 

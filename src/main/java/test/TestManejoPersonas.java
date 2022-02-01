@@ -1,7 +1,7 @@
 package test;
 
 import datos.Conexion;
-import datos.PersonaDAO;
+import datos.PersonaJDBC;
 import domain.Persona;
 import java.sql.Connection;
 import java.sql.*;
@@ -18,7 +18,7 @@ public class TestManejoPersonas {
                 conexion.setAutoCommit(false);
             }
 
-            PersonaDAO personaJDBC = new PersonaDAO(conexion);
+            PersonaJDBC personaJDBC = new PersonaJDBC(conexion);
 
             Persona modificarPersona = new Persona();
             modificarPersona.setIdPersona(2);
