@@ -5,6 +5,7 @@ import datos.PersonaDAO;
 import domain.Persona;
 import java.sql.Connection;
 import java.sql.*;
+import java.util.List;
 
 public class TestManejoPersonas {
 
@@ -29,14 +30,23 @@ public class TestManejoPersonas {
             personaJDBC.actualizar(modificarPersona);
 
             //terminada esta ejecucion ahora vamos a hacer ahora un insert
-            Persona nuevaPersona = new Persona();
-            nuevaPersona.setNombre("Batman");
-            nuevaPersona.setApellido("bruno");
-            personaJDBC.insertar(nuevaPersona);
+//            Persona nuevaPersona = new Persona();
+//            nuevaPersona.setNombre("Batman");
+//            nuevaPersona.setApellido("bruno");
+//            personaJDBC.insertar(nuevaPersona);
 
-              conexion.commit();
-              System.out.println("se ha echo commit de la transaccion");
-              
+            //ELIMINANDO PERSONAS
+                personaJDBC.eliminar(new Persona(9));
+
+                
+            List<Persona> personas = personaJDBC.seleccionar();
+            for (Persona persona : personas) {
+                System.out.println("persona =" + persona);
+            }
+
+            conexion.commit();
+            System.out.println("se ha echo commit de la transaccion");
+
         } catch (SQLException ex) {
             ex.printStackTrace(System.out);
             //al hacer rollback significa que si hay un error al pasarle los datos no se van a guardar en la bdd
